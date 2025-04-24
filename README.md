@@ -6,6 +6,16 @@ If you use this code, please cite:
 
 > S. Ahamed and E. Haber, _"DAWN-FM: Data-Aware and Noise-Informed Flow Matching for Solving Inverse Problems"_, arXiv:2412.04766, 2025.
 
+<p align="center">
+<img src="./assets/FMschematic_without_with_data.png" alt="Figure" height="200" />
+</p>
+<p align="justify">
+<sub><i>
+    Schematics for standard flow matching (left) and flow matching for solving inverse problem characterized by the forward problem <b>A</b> along with an additive noise scale $\sigma$ (right). Here, <b>s</b>_ftheta$ $\phi = \alpha + \beta$ represents the trained network for estimating the velocity along the trajectory $\bfx_t$ at time $t$ between the reference distribution $\pi_0$ and the target distribution $\pi_1$, and $f$ represents a transformation on the measured (noisy) data which is used as data-embedding into the flow-matching network on the right.
+</i></sub>
+</p>
+
+
 ## Getting Started
 
 ### 1. Clone the repository
