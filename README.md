@@ -11,7 +11,7 @@ If you use this code, please cite:
 </p>
 <p align="justify">
 <sub><i>
-    Schematics for standard flow matching (left) and flow matching for solving inverse problem characterized by the forward problem <b>A</b> along with an additive noise scale $\sigma$ (right). Here, <b>s</b>_ftheta$ $\phi = \alpha + \beta$ represents the trained network for estimating the velocity along the trajectory $\bfx_t$ at time $t$ between the reference distribution $\pi_0$ and the target distribution $\pi_1$, and $f$ represents a transformation on the measured (noisy) data which is used as data-embedding into the flow-matching network on the right.
+    Schematics for standard flow matching (left) and flow matching for solving inverse problem characterized by the forward problem $\mathbf{A}$ along with an additive noise scale $\sigma$ (right). Here, $\mathbf{s}_\boldsymbol{theta}$ represents the trained network for estimating the velocity along the trajectory $\mathbf{x}_t$ at time $t$ between the reference distribution $\pi_0$ and the target distribution $\pi_1$, and $f$ represents a transformation on the measured (noisy) data which is used as data-embedding into the flow-matching network on the right.
 </i></sub>
 </p>
 
