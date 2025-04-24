@@ -27,6 +27,14 @@ cd AttEn-DAWN-FM
 conda env create -f environment.yml
 ```
 
+### 2.  Set up paths for data and results directory
+In [./config.py](./config.py) file and update the paths to the directories where you want to save the results during training/inference and the path to the location of training/test data. 
+```bash
+import os 
+MAIN_DIR = '' # the directory to save results and logs
+DATA_DIR = '' # the location of your dataset
+```
+
 ### 3.  Train the model
 ```bash
 python train.py --dataset <dataset> --data-emb <data-emb> --batch-size <batch-size> --workers <workers> --device <cuda-device-index> --max-epochs <max-epochs> --save-every <save-every> --max-noise <max-noise>
