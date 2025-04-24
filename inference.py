@@ -49,10 +49,10 @@ def parse_args():
     p.add_argument("--data-emb", choices=["atb", "cgls"], default="atb")
     p.add_argument("--device", default="0", help="CUDA idx or 'cpu'")
     p.add_argument("--batch-size", type=int, default=4)
+    p.add_argument("--workers", type=int, default=4)
     p.add_argument("--noise-level", type=float, default=0.05)
     p.add_argument("--nsteps", type=int, default=100)
     p.add_argument("--num-runs", type=int, default=32)
-    p.add_argument("--workers", type=int, default=4)
     return p.parse_args()
 
 

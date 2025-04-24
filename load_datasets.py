@@ -53,9 +53,9 @@ def get_mnist_dataset(split='train', img_size=None, convert_to_three_channels=Fa
         ])
     
     if split == 'train':
-        dataset = datasets.MNIST(root=MAIN_DATA_DIR, train=True, download=False, transform=transform)
+        dataset = datasets.MNIST(root=MAIN_DATA_DIR, train=True, download=True, transform=transform)
     elif split == 'test':
-        dataset = datasets.MNIST(root=MAIN_DATA_DIR, train=False, download=False, transform=transform)
+        dataset = datasets.MNIST(root=MAIN_DATA_DIR, train=False, download=True, transform=transform)
     else:
         print(f'Invalid split value: {split}')
     return dataset 

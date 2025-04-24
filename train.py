@@ -55,6 +55,7 @@ def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Train Flow‑Matching UNet‑FMG-Attention")
     p.add_argument("--dataset", choices=_DATASET_LOADERS.keys(), default="MNIST")
     p.add_argument("--batch-size", type=int, default=64)
+    p.add_argument("--workers", type=int, default=2)
     p.add_argument("--data-emb", choices=["atb", "cgls"], default="cgls")
     p.add_argument("--device", default="0", help="CUDA index or 'cpu'")
     p.add_argument("--max-epochs", type=int, default=1000)
@@ -79,12 +80,12 @@ def main() -> None:
     # ---------------- Dataset -------------------------------------------------
     dataset_loader = _DATASET_LOADERS[args.dataset]
     dataset = dataset_loader(split="train")
-    train_loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=0)
+    train_loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=args.workers)
     image_size = dataset[0][0].shape[-1]
 
     # ---------------- Forward problem selection ------------------------------
     if args.dataset == "OrganCMNIST": 
-        FP = Tomography(dim=image_size, num_angles=180, device=device)
+        FP = Tomography(dim=image_size, num_angles=360, device=device)
         arch = [1, 16, 32, 64]
     else:  # For MNIST, default to Gaussian blur
         FP = BlurFFT(dim=image_size, sigma=[3, 3], device=device)
