@@ -54,7 +54,7 @@ python compute_metrics.py --dataset <dataset> --data-emb <data-emb> --device <cu
 where, `<dataset>` can be MNIST or OrganCMNIST, `<data-emb>` can be either `atb` (for `f(b) = A^Tb`) or `cgls` (`f(b) = Conjugate-Gradient-Least-Squares(A, b)`), `<cuda-device-id>` could be device id for the CUDA device or `'cpu'`, `<num-runs>` number of independent generation runs for each input (as specified during inference). 
 
 ## References
-[1] Diederik P Kingma and Jimmy Ba. Adam: A method for stochastic optimization. *arXiv preprint arXiv: 1412.6980*, 2014.
+[1] Diederik P Kingma and Jimmy Ba. Adam: A method for stochastic optimization. *arXiv preprint arXiv: 1412.6980*, 2014. 
 
 [2] Jiancheng Yang, Rui Shi, Donglai Wei, Zequan Liu, Lin Zhao, Bilian Ke, Hanspeter Pfister, and Bingbing Ni. _"Medmnist v2-a large-scale lightweight benchmark for 2d and 3d biomedical image classification"_. Scientific Data, 10(1):41, 2023.
 
